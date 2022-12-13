@@ -82,7 +82,7 @@ public class ListOefening {
         Collections.sort(clubNames);
         boolean psv = true;
         for (String club : clubNames) {
-            if (!psv) {
+            if (psv) {
                 newClubNames2.add(club);
             } else if (club.equals("PSV")) {
                 newClubNames2.add(club);
