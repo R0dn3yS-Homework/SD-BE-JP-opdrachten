@@ -84,7 +84,7 @@ public class ListOefening {
         for (String club : clubNames) {
             if (!psv) {
                 newClubNames2.add(club);
-            } else if (club.equals("Ajax")) {
+            } else if (club.equals("PSV")) {
                 newClubNames2.add(club);
                 psv = false;
             }
