@@ -31,5 +31,31 @@ public class Hoofdletters {
         curstomerNames.add("henk den hartog");
         curstomerNames.add("mo el-mecky");
         curstomerNames.add("fredje kadetje");
+
+        System.out.println(capitalizeNames(curstomerNames));
+    }
+
+    public static List<String> capitalizeNames(List<String> list) {
+        List<String> customerNames = new ArrayList<>();
+
+        for (String name : list) {
+            char[] charArray = name.toCharArray();
+            boolean foundSpace = true;
+
+            for(int i = 0; i < charArray.length; i++) {
+                if (Character.isLetter(charArray[i])) {
+                    if (foundSpace) {
+                        charArray[i] = Character.toUpperCase(charArray[i]);
+                        foundSpace = false;
+                    }
+                } else {
+                    foundSpace = true;
+                }
+            }
+            name = String.valueOf(charArray);
+            customerNames.add(name);
+        }
+
+        return customerNames;
     }
 }

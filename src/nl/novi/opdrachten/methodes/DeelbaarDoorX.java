@@ -24,4 +24,18 @@ package nl.novi.opdrachten.methodes;
  */
 
 public class DeelbaarDoorX {
+  public static void main(String[] args) {
+    int chosenNumber = 44;
+    int X = 7;
+
+    if (divisibleByX(chosenNumber, X)) {
+      System.out.println("deelbaar door " + X);
+    } else {
+      System.out.println("ondeelbaar door " + X);
+    }
+  }
+
+  public static boolean divisibleByX(int number, int X) {
+    return (number % X == 0);
+  }
 }

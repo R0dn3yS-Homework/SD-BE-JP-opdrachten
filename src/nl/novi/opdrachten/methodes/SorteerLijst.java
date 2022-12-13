@@ -3,6 +3,7 @@ package nl.novi.opdrachten.methodes;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -27,6 +28,17 @@ public class SorteerLijst {
         List<Integer> wrongList = new ArrayList<>(Arrays.asList(1, 2, 4, 5, 6, 7, 8));
         List<Integer> correctList = new ArrayList<>(Arrays.asList(88, 888, 909909));
 
+        // System.out.println(sortList(wrongList));
+        System.out.println(sortList(correctList));
     }
 
+
+    public static List<Integer> sortList(List<Integer> oldList) {
+        if (oldList.size() != 3) {
+            throw new Error("List is not of size: 3");
+        }
+
+        Collections.sort(oldList);
+        return oldList;
+    }
 }
